@@ -1,4 +1,5 @@
-import HeroCanvas from "../canvas/HeroCanvas";
+import MicroserviceScene from "../canvas/MicroserviceScene";
+import TypeWriter from "./TypeWriter";
 
 function Hero() {
   return (
@@ -11,27 +12,33 @@ function Hero() {
             Senior Java Developer
           </p>
           <h1 className="mb-6 text-4xl font-black leading-tight sm:text-5xl lg:text-7xl">
-            Hi, I&apos;m{" "}
-            <span className="animate-[pulse_3s_ease-in-out_infinite] bg-gradient-to-r from-cyan-300 via-sky-400 to-blue-500 bg-clip-text text-transparent">
-              Sai Prakash
+            <span className="flex items-center justify-center gap-2 lg:justify-start">
+                Hi
+                <span className="inline-block origin-[70%_70%] animate-[wave_2s_ease-in-out_infinite]">
+                👋
+                </span>
+                , I'm
+            </span>
+
+            <span className="mt-2 block bg-gradient-to-r from-cyan-300 via-sky-400 to-blue-500 bg-clip-text text-transparent">
+              <TypeWriter />
             </span>
           </h1>
 
           <div className="mb-8 flex flex-wrap justify-center gap-3 lg:justify-start">
             <span className="rounded-full border border-cyan-400/30 bg-cyan-400/10 px-4 py-2 text-sm text-cyan-200 shadow-[0_0_20px_rgba(34,211,238,0.15)]">
-              React Developer
+              Java Backend Developer
             </span>
             <span className="rounded-full border border-white/10 bg-white/10 px-4 py-2 text-sm text-slate-200">
-              UI/UX Enthusiast
+              Spring Boot
             </span>
             <span className="rounded-full border border-white/10 bg-white/10 px-4 py-2 text-sm text-slate-200">
-              Building Modern Apps
+              Microservices
             </span>
           </div>
 
           <p className="mx-auto max-w-2xl text-lg leading-8 text-slate-300 lg:mx-0">
-            I craft elegant digital experiences with smooth animations,
-            thoughtful design, and modern web technologies.
+            Java Backend Developer with 5+ years of experience building scalable enterprise applications using Java, Spring Boot, Microservices, REST APIs, and SQL. Experienced in integrating React-based frontends with robust backend services.
           </p>
         </div>
 
@@ -43,7 +50,7 @@ function Hero() {
 
             <div className="absolute inset-0 m-4 rounded-[1.3rem] border border-white/10 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 p-5 shadow-inner">
               <div className="flex h-full items-center justify-center overflow-hidden rounded-[1rem]">
-                <HeroCanvas />
+                <MicroserviceScene />
               </div>
             </div>
 

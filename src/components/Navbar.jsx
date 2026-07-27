@@ -5,18 +5,18 @@ function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 w-full border-b border-white/10 bg-slate-950/85 text-white shadow-[0_8px_30px_rgba(0,0,0,0.35)] backdrop-blur-xl">
+    <nav className="sticky top-0 z-50 w-full border-b border-cyan-400/20 bg-[linear-gradient(90deg,_rgba(2,6,23,0.95)_0%,_rgba(15,23,42,0.95)_50%,_rgba(8,47,73,0.95)_100%)] text-white shadow-[0_8px_30px_rgba(34,211,238,0.15)] backdrop-blur-xl">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
-        <h1 className="cursor-pointer text-2xl font-extrabold tracking-wide text-cyan-300 transition-colors duration-300 hover:text-cyan-400">
+        <h1 className="cursor-pointer text-2xl font-extrabold tracking-wide text-cyan-300 transition-all duration-300 hover:text-cyan-200 hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]">
           Sai P.
         </h1>
 
         <div className="flex items-center gap-12">
-          <ul className="hidden list-none items-center gap-1 rounded-full border border-white/10 bg-white/10 px-2 py-1 shadow-inner shadow-cyan-500/10 backdrop-blur-md md:flex">
+          <ul className="hidden list-none items-center gap-1 rounded-full border border-cyan-400/20 bg-white/10 px-2 py-1 shadow-[inset_0_1px_0_rgba(255,255,255,0.12),0_0_20px_rgba(34,211,238,0.08)] backdrop-blur-md md:flex">
             {navLinks.map((link) => (
               <li
                 key={link.id}
-                className="cursor-pointer select-none rounded-full px-4 py-2 text-sm font-medium text-slate-200 transition-all duration-300 hover:-translate-y-1 hover:bg-cyan-400/20 hover:text-cyan-300"
+                className="cursor-pointer select-none rounded-full px-4 py-2 text-sm font-medium text-slate-200 transition-all duration-300 hover:-translate-y-1 hover:bg-cyan-400/20 hover:text-cyan-300 hover:shadow-[0_0_10px_rgba(34,211,238,0.2)]"
               >
                 {link.title}
               </li>
@@ -27,7 +27,7 @@ function Navbar() {
             type="button"
             aria-label="Toggle menu"
             onClick={() => setIsMenuOpen((prev) => !prev)}
-            className="rounded-full border border-white/10 bg-white/10 p-2 text-white transition-all duration-300 hover:bg-cyan-400/20 md:hidden"
+            className="rounded-full border border-cyan-400/20 bg-white/10 p-2 text-white transition-all duration-300 hover:bg-cyan-400/20 hover:shadow-[0_0_10px_rgba(34,211,238,0.2)] md:hidden"
           >
             <svg
               className="h-5 w-5"
@@ -48,9 +48,13 @@ function Navbar() {
             </svg>
           </button>
 
-          <button className="rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 px-5 py-2 text-sm font-medium text-white shadow-lg shadow-cyan-500/30 transition-all duration-300 hover:scale-105 hover:from-cyan-400 hover:to-blue-400">
+          <a
+            href="/Sai_Prakash_Sikhakolli_Resume.pdf"
+            download
+            className="rounded-full bg-gradient-to-r from-cyan-500 via-sky-500 to-blue-600 px-5 py-2 text-sm font-semibold text-white shadow-[0_0_20px_rgba(34,211,238,0.25)] transition-all duration-300 hover:scale-105 hover:from-cyan-400 hover:via-sky-400 hover:to-blue-500"
+          >
             Download CV
-          </button>
+          </a>
         </div>
       </div>
 
