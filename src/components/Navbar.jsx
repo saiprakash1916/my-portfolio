@@ -8,7 +8,7 @@ function Navbar() {
     <nav className="sticky top-0 z-50 w-full border-b border-cyan-400/20 bg-[linear-gradient(90deg,_rgba(2,6,23,0.95)_0%,_rgba(15,23,42,0.95)_50%,_rgba(8,47,73,0.95)_100%)] text-white shadow-[0_8px_30px_rgba(34,211,238,0.15)] backdrop-blur-xl">
       <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 lg:px-8">
         <h1 className="cursor-pointer text-2xl font-extrabold tracking-wide text-cyan-300 transition-all duration-300 hover:text-cyan-200 hover:drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]">
-          Sai P.
+          SP
         </h1>
 
         <div className="flex items-center gap-12">

@@ -1,4 +1,4 @@
-import MicroserviceScene from "../canvas/MicroserviceScene";
+import HeroCanvas from "../canvas/HeroCanvas";
 import TypeWriter from "./TypeWriter";
 
 function Hero() {
@@ -13,11 +13,11 @@ function Hero() {
           </p>
           <h1 className="mb-6 text-4xl font-black leading-tight sm:text-5xl lg:text-7xl">
             <span className="flex items-center justify-center gap-2 lg:justify-start">
-                Hi
-                <span className="inline-block origin-[70%_70%] animate-[wave_2s_ease-in-out_infinite]">
+              Hi
+              <span className="inline-block origin-[70%_70%] animate-[wave_2s_ease-in-out_infinite]">
                 👋
-                </span>
-                , I'm
+              </span>
+              , I'm
             </span>
 
             <span className="mt-2 block bg-gradient-to-r from-cyan-300 via-sky-400 to-blue-500 bg-clip-text text-transparent">
@@ -38,25 +38,15 @@ function Hero() {
           </div>
 
           <p className="mx-auto max-w-2xl text-lg leading-8 text-slate-300 lg:mx-0">
-            Java Backend Developer with 5+ years of experience building scalable enterprise applications using Java, Spring Boot, Microservices, REST APIs, and SQL. Experienced in integrating React-based frontends with robust backend services.
+            Java Backend Developer with 5+ years of experience building scalable
+            enterprise applications using Java, Spring Boot, Microservices, REST
+            APIs, and SQL. Experienced in integrating React-based frontends with
+            robust backend services.
           </p>
         </div>
 
         <div className="flex justify-center lg:justify-end">
-          <div className="relative h-[320px] w-[420px] rotate-[-6deg] rounded-[2rem] border border-cyan-400/30 bg-slate-900/70 p-4 shadow-[0_25px_80px_rgba(34,211,238,0.2)] backdrop-blur-xl sm:h-[430px] sm:w-[560px]">
-            <div className="absolute left-6 top-6 h-3 w-3 rounded-full bg-red-500" />
-            <div className="absolute left-12 top-6 h-3 w-3 rounded-full bg-yellow-500" />
-            <div className="absolute left-[4.5rem] top-6 h-3 w-3 rounded-full bg-green-500" />
-
-            <div className="absolute inset-0 m-4 rounded-[1.3rem] border border-white/10 bg-gradient-to-br from-slate-800 via-slate-900 to-slate-950 p-5 shadow-inner">
-              <div className="flex h-full items-center justify-center overflow-hidden rounded-[1rem]">
-                <MicroserviceScene />
-              </div>
-            </div>
-
-            <div className="absolute -bottom-8 right-6 h-8 w-40 rounded-b-2xl bg-slate-800/80 shadow-lg" />
-            <div className="absolute -bottom-4 left-10 h-4 w-56 rounded-full bg-slate-700/70 blur-xl" />
-          </div>
+            <HeroCanvas />
         </div>
       </div>
     </section>
