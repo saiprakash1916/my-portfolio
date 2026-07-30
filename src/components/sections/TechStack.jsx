@@ -1,8 +1,8 @@
 import { useRef } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { TECH_GROUPS } from "@/constants/data";
-import { fadeUp, staggerContainer } from "@/animations/variants";
-import SectionHeading from "@/common/SectionHeading";
+import { TECH_GROUPS } from "../../constants/data";
+import { fadeUp, staggerContainer } from "../../animations/variants";
+import SectionHeading from "../../common/SectionHeading";
 
 function TiltCard({ group, index }) {
   const ref = useRef(null);

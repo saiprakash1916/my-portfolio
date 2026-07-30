@@ -4,8 +4,8 @@ import { FaGithub, FaLinkedinIn, FaEnvelope } from "react-icons/fa";
 import { Download, ArrowRight } from "lucide-react";
 import { PROFILE } from "@/constants/data";
 import { maskLine, fadeUp, EASE } from "@/animations/variants";
-import Typewriter from "@/common/Typewriter";
-import MagneticButton from "@/common/MagneticButton";
+import Typewriter from "../../common/Typewriter";
+import MagneticButton from "../../common/MagneticButton";
 
 const BackendScene = lazy(() => import("@/canvas/BackendScene"));
 

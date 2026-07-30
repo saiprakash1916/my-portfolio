@@ -1,5 +1,5 @@
 import { FaGithub, FaLinkedinIn, FaEnvelope } from "react-icons/fa";
-import { PROFILE, NAV_LINKS } from "@/constants/data";
+import { PROFILE, NAV_LINKS } from "../../constants/data";
 
 export default function Footer() {
   const socials = [

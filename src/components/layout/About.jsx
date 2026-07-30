@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { Download } from "lucide-react";
 import { PROFILE } from "@/constants/data";
 import { fadeUp, staggerContainer, EASE } from "@/animations/variants";
-import SectionHeading from "@/common/SectionHeading";
+import SectionHeading from "../../common/SectionHeading";
 
 export default function About() {
   return (
