@@ -1,11 +1,11 @@
-import Hero from "@/layout/Hero";
-import About from "@/layout/About";
-import TechStack from "@/sections/TechStack";
-import Experience from "@/sections/Experience";
-import Projects from "@/sections/Projects";
-import Architecture from "@/sections/Architecture";
-import Certifications from "@/sections/Certifications";
-import Contact from "@/sections/Contact";
+import Hero from "@/components/layout/Hero";
+import About from "@/components/layout/About";
+import TechStack from "@/components/sections/TechStack";
+import Experience from "@/components/sections/Experience";
+import Projects from "@/components/sections/Projects";
+import Architecture from "@/components/sections/Architecture";
+import Certifications from "@/components/sections/Certifications";
+import Contact from "@/components/sections/Contact";
 import Marquee from "@/common/Marquee";
 
 export default function Portfolio() {

@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "sonner";
 import useLenis from "@/hooks/useLenis";
-import Navbar from "@/layout/Navbar";
-import Footer from "@/layout/Footer";
+import Navbar from "@/components/layout/Navbar";
+import Footer from "@/components/layout/Footer";
 import Portfolio from "@/pages/Portfolio";
 import { PROFILE } from "@/constants/data";
 
