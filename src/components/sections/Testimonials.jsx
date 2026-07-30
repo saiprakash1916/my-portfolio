@@ -1,9 +1,9 @@
 import { useState, useEffect, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Quote, ChevronLeft, ChevronRight } from "lucide-react";
-import { TESTIMONIALS } from "@/constants/data";
-import { EASE } from "@/animations/variants";
-import SectionHeading from "@/common/SectionHeading";
+import { TESTIMONIALS } from "../../constants/data";
+import { EASE } from "../../animations/variants";
+import SectionHeading from "../../common/SectionHeading";
 
 export default function Testimonials() {
   const [index, setIndex] = useState(0);

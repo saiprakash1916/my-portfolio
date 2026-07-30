@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { BadgeCheck } from "lucide-react";
-import { CERTIFICATIONS } from "@/constants/data";
-import { fadeUp, staggerContainer } from "@/animations/variants";
-import SectionHeading from "@/common/SectionHeading";
+import { CERTIFICATIONS } from "../../constants/data";
+import { fadeUp, staggerContainer } from "../../animations/variants";
+import SectionHeading from "../../common/SectionHeading";
 
 export default function Certifications() {
   return (
