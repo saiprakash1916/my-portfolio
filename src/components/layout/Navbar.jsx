@@ -6,6 +6,7 @@ import { NAV_LINKS, PROFILE } from "@/constants/data";
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [hovered, setHovered] = useState(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
@@ -31,17 +32,38 @@ export default function Navbar() {
         </a>
 
         <div className="hidden md:flex items-center gap-4 lg:gap-6">
-          {NAV_LINKS.map((l) => (
-            <a
-              key={l.id}
-              href={`#${l.id}`}
-              data-scroll
-              data-testid={`nav-link-${l.id}`}
-              className="px-3.5 py-2 text-base text-muted-foreground hover:text-foreground transition-colors relative"
-            >
-              {l.label}
-            </a>
-          ))}
+          {NAV_LINKS.map((l, index) => (
+              <motion.a
+                key={l.id}
+                href={`#${l.id}`}
+                data-scroll
+                onHoverStart={() => setHovered(index)}
+                onHoverEnd={() => setHovered(null)}
+                whileHover={{
+                  scale: 1.35,
+                  y: -6,
+                }}
+                animate={{
+                  scale:
+                    hovered === null
+                      ? 1
+                      : hovered === index
+                      ? 1.35
+                      : Math.abs(hovered - index) === 1
+                      ? 1.15
+                      : 1,
+                  opacity: hovered === null || hovered === index ? 1 : 0.75,
+                }}
+                transition={{
+                  type: "spring",
+                  stiffness: 350,
+                  damping: 18,
+                }}
+                className="relative px-4 py-2 text-base font-medium text-muted-foreground hover:text-white"
+              >
+                {l.label}
+              </motion.a>
+            ))}
         </div>
 
         <a

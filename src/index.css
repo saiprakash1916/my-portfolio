@@ -120,3 +120,27 @@ body {
   50% { transform: translate(20px, -30px) scale(1.06); }
 }
 .animate-float-slow { animation: floatSlow 14s ease-in-out infinite; }
+
+@keyframes wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  15% {
+    transform: rotate(14deg);
+  }
+  30% {
+    transform: rotate(-8deg);
+  }
+  45% {
+    transform: rotate(14deg);
+  }
+  60% {
+    transform: rotate(-4deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}

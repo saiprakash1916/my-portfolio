@@ -43,7 +43,10 @@ export default function Hero() {
 
           <h1 className="font-display text-5xl sm:text-6xl lg:text-7xl font-semibold leading-[1.02] tracking-tight">
             <MaskWord i={0}>
-              <span className="text-muted-foreground text-3xl sm:text-4xl font-normal">Hi, I'm</span>
+              <span className="text-muted-foreground text-3xl sm:text-4xl font-normal">Hi
+              <span className="inline-block origin-[70%_70%] animate-[wave_2s_ease-in-out_infinite]">
+                👋
+              </span>, I'm</span>
             </MaskWord>
             <MaskWord i={1}>
               <span className="text-gradient">{PROFILE.name}</span>
@@ -51,7 +54,7 @@ export default function Hero() {
           </h1>
 
           <motion.div variants={fadeUp} className="mt-4 font-display text-2xl sm:text-3xl text-foreground/90 h-10">
-            <Typewriter words={["Spring Boot", "Microservices", "REST APIs", "Distributed Systems"]} />
+            <Typewriter words={["Java, Spring Boot", "Microservices", "REST APIs", "Distributed Systems", "Reat.js"]} />
           </motion.div>
 
           <motion.p

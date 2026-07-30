@@ -41,16 +41,26 @@ function ProjectCard({ project, featured }) {
             </span>
           ))}
         </div>
+        {project.status === "in-progress" && (
+          <span className="absolute top-4 right-4 z-20 rounded-full bg-yellow-500/20 border border-yellow-500/30 px-3 py-1 text-xs font-medium text-yellow-400">
+            🚧 Under Development
+          </span>
+        )}
         <div className="mt-6 flex items-center gap-4">
-          <a
-            href={project.demo}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:gap-2.5 transition-all"
-            data-testid="project-demo-link"
-          >
-            Live Demo <ArrowUpRight size={15} />
-          </a>
+          {project.status === "Completed" ? (
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:gap-2.5 transition-all"
+                >
+                  Live Demo <ArrowUpRight size={15} />
+                </a>
+              ) : (
+                <span className="inline-flex items-center gap-1.5 text-sm font-medium text-yellow-400 cursor-not-allowed">
+                  🚧 Demo Coming Soon
+                </span>
+              )}
           <a
             href={project.github}
             target="_blank"
