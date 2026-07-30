@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Cloud, Database as DbIcon, Server, ArrowRight, Cpu } from "lucide-react";
-import { SERVICES } from "../../constants/data";
-import { EASE } from "../../animations/variants";
-import SectionHeading from "../../common/SectionHeading";
+import { SERVICES } from "@/constants/data";
+import { EASE } from "@/animations/variants";
+import SectionHeading from "@/common/SectionHeading";
 
 function FlowPill({ icon: Icon, label, active, onClick, testid }) {
   return (

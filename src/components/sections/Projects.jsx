@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
 import { ArrowUpRight } from "lucide-react";
-import { PROJECTS } from "../../constants/data";
-import { fadeUp, staggerContainer, EASE } from "../../animations/variants";
-import SectionHeading from "../../common/SectionHeading";
+import { PROJECTS } from "@/constants/data";
+import { fadeUp, staggerContainer, EASE } from "@/animations/variants";
+import SectionHeading from "@/common/SectionHeading";
 
 function ProjectCard({ project, featured }) {
   return (
