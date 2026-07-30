@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 import { toast } from "sonner";
 import { Send, Loader2, Mail, MapPin } from "lucide-react";
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
-import { PROFILE } from "../../constants/data";
+import { PROFILE } from "@/constants/data";
 import { EASE } from "@/animations/variants";
-import SectionHeading from "../../common/SectionHeading";
+import SectionHeading from "@/common/SectionHeading";
 
 //const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

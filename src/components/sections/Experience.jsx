@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 import { MapPin } from "lucide-react";
-import { EXPERIENCE } from "../../constants/data";
-import { EASE } from "../../animations/variants";
-import SectionHeading from "../../common/SectionHeading";
+import { EXPERIENCE } from "@/constants/data";
+import { EASE } from "@/animations/variants";
+import SectionHeading from "@/common/SectionHeading";
 
 export default function Experience() {
   return (
