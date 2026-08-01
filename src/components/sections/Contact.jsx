@@ -1,5 +1,5 @@
 import { useState } from "react";
-import axios from "axios";
+import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { toast } from "sonner";
 import { Send, Loader2, Mail, MapPin } from "lucide-react";
@@ -10,6 +10,9 @@ import SectionHeading from "@/common/SectionHeading";
 
 //const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const SERVICE_ID = import.meta.env.VITE_EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = import.meta.env.VITE_EMAILJS_TEMPLATE_ID;
+const PUBLIC_KEY = import.meta.env.VITE_EMAILJS_PUBLIC_KEY;
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
@@ -31,15 +34,34 @@ export default function Contact() {
     ev.preventDefault();
     if (!validate()) return;
     setLoading(true);
+
     try {
-      const { data } = await axios.post(`${API}/contact`, {
-        ...form,
-        subject: form.subject || "New portfolio message",
+      await emailjs.send(
+        SERVICE_ID,
+        TEMPLATE_ID,
+        {
+          name: form.name,
+          email: form.email,
+          subject: form.subject || "Portfolio Contact",
+          message: form.message,
+        },
+        PUBLIC_KEY
+      );
+
+      toast.success("Message sent successfully! I'll get back to you soon.");
+
+      setForm({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
       });
-      toast.success(data.message || "Message sent!");
-      setForm({ name: "", email: "", subject: "", message: "" });
-    } catch {
-      toast.error("Something went wrong. Please try again.");
+
+      setErrors({});
+    } catch (error) {
+      console.error("EmailJS Error:", error);
+
+      toast.error("Failed to send message. Please try again.");
     } finally {
       setLoading(false);
     }
