@@ -33,44 +33,35 @@ function ProjectCard({ project, featured }) {
         <h3 className="font-display text-2xl font-semibold text-foreground group-hover:text-primary transition-colors">
           {project.title}
         </h3>
-        <p className="mt-2 text-sm text-muted-foreground leading-relaxed max-w-lg">{project.description}</p>
-        <div className="mt-4 flex flex-wrap gap-2">
-          {project.tech.map((t) => (
-            <span key={t} className="rounded-md bg-secondary/70 px-2.5 py-1 text-xs text-foreground/70 border border-border">
-              {t}
-            </span>
-          ))}
+        <p className="mt-2 text-sm text-muted-foreground leading-relaxed max-w-lg">
+          {project.description}
+        </p>
+        <div className="mt-6 flex flex-wrap items-center justify-between gap-3">
+          <div className="flex min-w-0 flex-1 flex-wrap items-center gap-2">
+            {project.tech.map((t) => (
+              <span
+                key={t}
+                className="rounded-md bg-secondary/70 px-2.5 py-1 text-xs text-foreground/70 border border-border whitespace-nowrap"
+              >
+                {t}
+              </span>
+            ))}
+          </div>
+          <a
+            href={project.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex shrink-0 items-center gap-1.5 text-sm text-foreground/70 hover:text-foreground transition-colors"
+            data-testid="project-github-link"
+          >
+            <FaGithub size={15} /> Code
+          </a>
         </div>
         {project.status === "in-progress" && (
           <span className="absolute top-4 right-4 z-20 rounded-full bg-yellow-500/20 border border-yellow-500/30 px-3 py-1 text-xs font-medium text-yellow-400">
             🚧 Under Development
           </span>
         )}
-        <div className="mt-6 flex items-center gap-4">
-          {project.status === "Completed" ? (
-                <a
-                  href={project.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 text-sm font-medium text-primary hover:gap-2.5 transition-all"
-                >
-                  Live Demo <ArrowUpRight size={15} />
-                </a>
-              ) : (
-                <span className="inline-flex items-center gap-1.5 text-sm font-medium text-yellow-400 cursor-not-allowed">
-                  🚧 Demo Coming Soon
-                </span>
-              )}
-          <a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 text-sm text-foreground/70 hover:text-foreground transition-colors"
-            data-testid="project-github-link"
-          >
-            <FaGithub size={15} /> Code
-          </a>
-        </div>
       </div>
     </motion.article>
   );
@@ -78,7 +69,11 @@ function ProjectCard({ project, featured }) {
 
 export default function Projects() {
   return (
-    <section id="projects" className="relative py-28 sm:py-36 px-6" data-testid="projects">
+    <section
+      id="projects"
+      className="relative py-28 sm:py-36 px-6"
+      data-testid="projects"
+    >
       <div className="max-w-6xl mx-auto">
         <SectionHeading
           index="04"
