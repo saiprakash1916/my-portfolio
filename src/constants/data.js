@@ -1,7 +1,7 @@
 // Central content source for the entire portfolio.
 export const PROFILE = {
   name: "Sai Prakash",
-  role: "Senior Java Developer",
+  role: "Senior Software Developer",
   tagline: "Building scalable, enterprise-grade applications with Java, Spring Boot, Microservices & React.",
   location: "Hyderabad, India",
   email: "saiprakash1916@gmail.com",
@@ -12,7 +12,7 @@ export const PROFILE = {
     email: "mailto:saiprakash1916@gmail.com",
   },
   about:
-    `I'm a Senior Java Developer with over 5+ years of experience building scalable enterprise applications for the Banking and Financial Services industry. I specialize in Java, Spring Boot, Microservices, REST APIs, and distributed systems, designing secure, reliable, and high-performance backend services that power business-critical applications.
+    `I'm a Senior Software Developer with over 5+ years of experience building scalable enterprise applications for the Banking and Financial Services industry. I specialize in Java, Spring Boot, Microservices, REST APIs, and distributed systems, designing secure, reliable, and high-performance backend services that power business-critical applications.
 
     I enjoy solving complex engineering problems through clean architecture, automation, and performance optimization. Beyond backend development, I'm continuously expanding my expertise in React, Node.js, AI-powered applications, and cloud technologies to build modern, end-to-end software solutions while staying current with emerging technologies.`
 };
@@ -47,9 +47,19 @@ export const MARQUEE_WORDS = [
 
 export const EXPERIENCE = [
   {
+    company: "BCT Consulting",
+    role: "Senior Software Developer",
+    duration: "2026 — Present",
+    location: "Hyderabad",
+    achievements: [
+      "Designed and implemented a microservices-based architecture for a banking application, improving scalability and maintainability.",
+    ],
+    tech: ["Java", "Spring Boot", "Microservices", "REST APIs", "Jenkins", "Docker", "Splunk", "React.js", "AI tools", "AI-powered applications"],
+  },
+  {
     company: "TATA Consultancy Services",
-    role: "Senior Java Developer",
-    duration: "2023 — Present",
+    role: "System Engineer",
+    duration: "2023 — 2026",
     location: "Hyderabad",
     achievements: [
       "Improved API response time by 40% for banking applications.",
