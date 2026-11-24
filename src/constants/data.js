@@ -49,7 +49,7 @@ export const EXPERIENCE = [
   {
     company: "BCT Consulting",
     role: "Senior Software Developer",
-    duration: "2026 — Present",
+    duration: "Nov 2026 — Present",
     location: "Hyderabad",
     achievements: [
       "Designed and implemented a microservices-based architecture for a banking application, improving scalability and maintainability.",
@@ -59,7 +59,7 @@ export const EXPERIENCE = [
   {
     company: "TATA Consultancy Services",
     role: "System Engineer",
-    duration: "2023 — 2026",
+    duration: "Mar 2023 - Oct 2026 · 3 yrs 8 mos",
     location: "Hyderabad",
     achievements: [
       "Improved API response time by 40% for banking applications.",
@@ -72,7 +72,7 @@ export const EXPERIENCE = [
   {
     company: "Virtusa Consulting Services",
     role: "Associate Engineer",
-    duration: "2021 — 2023",
+    duration: "May 2021 - Mar 2023 · 1 yr 11 mos",
     location: "Chennai",
     achievements: [
       "Improved payment processing efficiency by 30%.",
